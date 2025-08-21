@@ -1,0 +1,23 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Development files
+*.log
+*.tmp
+*.backup
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store?
+ehthumbs.db
+Icon?
+
+# Temporary files
+*.tmp
+*.temp

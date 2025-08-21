@@ -1,0 +1,1430 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background-color: #f0f8ff;
+  }
+
+/* 3-Column Layout */
+.game-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.left-column {
+    flex: 0 0 25%;
+    min-width: 250px;
+}
+
+.middle-column {
+    flex: 0 0 50%;
+    min-width: 500px;
+}
+
+.right-column {
+    flex: 0 0 25%;
+    min-width: 250px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Tab Navigation */
+.tab-navigation {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #f8f9fa;
+    border: none;
+    padding: 12px 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+    background-color: #e9ecef;
+}
+
+.tab-button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Tab Content */
+.tab-content {
+    position: relative;
+}
+
+.tab-panel {
+    display: none;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+/* Dashboard Currency Display */
+#dashboard-currency-display {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1200px) {
+    .game-container {
+        flex-direction: column;
+    }
+    
+    .left-column,
+    .middle-column,
+    .right-column {
+        flex: none;
+        width: 100%;
+        min-width: auto;
+    }
+}
+  
+  button {
+    margin: 5px;
+    padding: 10px;
+  }
+
+  #jump-button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 15px 20px;
+    margin: 10px 0;
+  }
+
+  #jump-button:hover {
+    background-color: #ff5252;
+  }
+
+  #snowflake-shop {
+    background-color: #e3f2fd;
+    border: 2px solid #2196f3;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  #snowflake-shop h3 {
+    color: #1976d2;
+    margin-top: 0;
+  }
+
+  #snowflake-shop ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  #snowflake-shop li {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+  }
+
+  #snowflake-shop button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 12px;
+    margin-left: 10px;
+  }
+
+  #snowflake-shop button:hover {
+    background-color: #45a049;
+  }
+
+  #currency-display {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Buff indicator styling */
+  #currency-display strong {
+    color: #2c3e50;
+  }
+
+  #dashboard-currency-display strong {
+    color: #2c3e50;
+  }
+
+/* Meltdown UI Styles */
+.meltdown-header {
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.meltdown-header h3 {
+  margin: 0;
+  color: #856404;
+}
+
+.meltdown-wallet-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d1ecf1;
+  border: 1px solid #bee5eb;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.wallet-info {
+  flex: 1;
+  line-height: 1.6;
+}
+
+.meltdown-wallet-section button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.meltdown-wallet-section button:hover {
+  background-color: #218838;
+}
+
+.meltdown-wallet-section button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.meltdown-assistants-section {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.meltdown-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.meltdown-table th,
+.meltdown-table td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.meltdown-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.meltdown-table button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin: 2px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.meltdown-table button:hover {
+  background-color: #c82333;
+}
+
+.meltdown-table button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.meltdown-summary {
+  background-color: #e2e3e5;
+  border: 1px solid #d6d8db;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.meltdown-summary h3 {
+  margin-top: 0;
+  color: #495057;
+}
+
+.meltdown-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.complete-meltdown-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.complete-meltdown-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Marketplace Styles */
+.marketplace-header {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.marketplace-header h3 {
+  margin: 0;
+  color: #155724;
+}
+
+.marketplace-content {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.marketplace-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.complete-jump-btn {
+  background-color: #6f42c1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.complete-jump-btn:hover {
+  background-color: #5a32a3;
+}
+
+/* Travel System Styles */
+.travel-status {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+/* Split Travel System Layout */
+.momentum-block {
+  grid-column: span 1; /* Take up 1 column instead of full width */
+}
+
+.travel-container-block {
+  grid-column: span 1; /* Take up 1 column instead of full width */
+}
+
+/* Ensure both blocks are the same height and properly aligned */
+.momentum-block,
+.travel-container-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.momentum-block .block-content,
+.travel-container-block .block-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Momentum meter specific styles */
+#momentum-meter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.momentum-progress-container {
+  width: 100%;
+  text-align: center;
+}
+
+.momentum-progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+}
+
+.momentum-progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+.momentum-progress-text {
+  font-weight: bold;
+  color: #495057;
+  font-size: 14px;
+}
+
+.momentum-actions {
+  text-align: center;
+}
+
+/* Travel container specific styles */
+.travel-container {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.travel-container:empty::before {
+  content: "Travel system status will appear here";
+}
+
+.travel-status.unlocked {
+  border-color: #28a745;
+  background-color: #f8fff9;
+}
+
+.travel-status.progressing {
+  border-color: #ffc107;
+  background-color: #fffbf0;
+}
+
+.travel-button-container {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.travel-button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.travel-button.unlocked {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  animation: travel-pulse 2s infinite;
+}
+
+.travel-button.unlocked:hover {
+  background: linear-gradient(135deg, #218838 0%, #1ba085 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.travel-progress-container {
+  margin-bottom: 15px;
+}
+
+.travel-progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #ddd;
+}
+
+.travel-progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+.travel-progress-text {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #495057;
+}
+
+.travel-info {
+  text-align: center;
+}
+
+.travel-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.travel-info .momentum-value {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.travel-info .time-estimate {
+  font-weight: bold;
+  color: #6c757d;
+}
+
+.travel-info .help-text {
+  font-style: italic;
+  color: #6c757d;
+  font-size: 12px;
+}
+
+/* Travel notification styles */
+.travel-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: notification-slide-in 0.5s ease-out;
+  max-width: 300px;
+}
+
+.notification-content h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.notification-content p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Animations */
+@keyframes travel-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes notification-slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Yeti System Styles - DEPRECATED (keeping for reference) */
+/*
+.yeti-status {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.yeti-status.active {
+  border-color: #28a745;
+  background-color: #f8fff9;
+}
+
+.yeti-buff-info {
+  margin-top: 10px;
+}
+
+.yeti-buff-info h4 {
+  margin: 0 0 10px 0;
+  color: #28a745;
+}
+
+.yeti-buff-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.yeti-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.yeti-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.yeti-button.harvester {
+  background-color: #28a745;
+}
+
+.yeti-button.harvester:hover {
+  background-color: #218838;
+}
+
+.yeti-button.defender {
+  background-color: #dc3545;
+}
+
+.yeti-button.defender:hover {
+  background-color: #c82333;
+}
+
+.yeti-button.traveler {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.yeti-button.traveler:hover {
+  background-color: #e0a800;
+}
+
+.yeti-button.scholar {
+  background-color: #8b4513;
+}
+
+.yeti-button.scholar:hover {
+  background-color: #6d3410;
+}
+*/
+
+/* Spawned Yeti Styles */
+.spawned-yeti {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  animation: yeti-bounce 2s infinite;
+}
+
+.spawned-yeti:hover {
+  transform: scale(1.1);
+}
+
+.yeti-sprite {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 3px solid #6c757d;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 120px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.yeti-icon {
+  width: 6px !important;
+  height: 6px !important;
+  margin-bottom: 8px;
+  border-radius: 4px;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Class-specific yeti styling */
+.yeti-sprite.harvester {
+  border-color: #8e44ad;
+  background: linear-gradient(135deg, #f4ecf7 0%, #e8d5ee 100%);
+}
+
+.yeti-sprite.defender {
+  border-color: #e67e22;
+  background: linear-gradient(135deg, #fef9e7 0%, #fcf3cf 100%);
+}
+
+.yeti-sprite.traveler {
+  border-color: #f39c12;
+  background: linear-gradient(135deg, #fef9e7 0%, #fcf3cf 100%);
+}
+
+.yeti-sprite.scholar {
+  border-color: #8b4513;
+  background: linear-gradient(135deg, #f7f3e9 0%, #eadfcc 100%);
+}
+
+.yeti-name {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.yeti-class {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Yeti bounce animation */
+@keyframes yeti-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Buff Indicators */
+.buff-indicator {
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: linear-gradient(135deg, #2196F3 0%, #21CBF3 100%);
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 4px rgba(33, 150, 243, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: pulse 2s ease-in-out infinite alternate;
+}
+
+.buff-indicator:empty {
+  display: none;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 2px 4px rgba(33, 150, 243, 0.3);
+  }
+  100% {
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.5);
+  }
+}
+
+/* Location theming for travel container */
+.travel-container.location-green {
+  border: 3px solid #4CAF50;
+  background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e8 100%);
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+.travel-container.location-orange {
+  border: 3px solid #FF9800;
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  box-shadow: 0 4px 8px rgba(255, 152, 0, 0.3);
+}
+
+.travel-container.location-yellow {
+  border: 3px solid #FFC107;
+  background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);
+  box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+}
+
+.travel-container.location-brown {
+  border: 3px solid #8D6E63;
+  background: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%);
+  box-shadow: 0 4px 8px rgba(141, 110, 99, 0.3);
+}
+
+.travel-container.location-inactive {
+  border: 3px solid #9E9E9E;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  box-shadow: 0 4px 8px rgba(158, 158, 158, 0.3);
+}
+
+/* Location active state styling */
+.travel-status.location-active {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Battle active state styling */
+.travel-status.battle-active {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: white;
+  border: 2px solid #a71e2a;
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+  border-radius: 8px;
+}
+
+.location-buff-info {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.location-buff-info h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.location-description {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.location-buff-info p {
+  margin: 5px 0;
+  color: #555;
+}
+
+#location-countdown {
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+/* Travel notifications */
+.travel-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #fff;
+  border: 2px solid #2196F3;
+  border-radius: 8px;
+  padding: 15px;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Battle System Styles */
+.battle-container {
+  margin: 10px 0;
+  padding: 15px;
+  border: 2px solid #d32f2f;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+  box-shadow: 0 4px 8px rgba(211, 47, 47, 0.3);
+}
+
+.battle-toggle-container {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.battle-toggle-section {
+  text-align: center;
+}
+
+.battle-toggle-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 5px;
+}
+
+.battle-toggle-button.enabled {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: white;
+}
+
+.battle-toggle-button.enabled:hover {
+  background: linear-gradient(135deg, #c82333 0%, #a71e2a 100%);
+  transform: translateY(-2px);
+}
+
+.battle-toggle-button.disabled {
+  background: #6c757d;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.battle-toggle-button.disabled:hover {
+  background: #6c757d;
+  transform: none;
+  cursor: not-allowed;
+}
+
+.battle-info {
+  margin: 5px 0 0 0;
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Old evil-yeti CSS classes removed - now using new battle-container system */
+
+/* Old battle notification CSS removed - now using new battle-container system */
+
+/* Ability belt level info */
+.ability-belt-info {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+  margin: 5px 0 0 0;
+}
+
+.travel-notification.travel-success {
+  border-color: #4CAF50;
+  background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e8 100%);
+}
+
+.travel-notification .notification-content h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.travel-notification .notification-content p {
+  margin: 5px 0;
+  color: #555;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* General disabled button styles */
+button:disabled {
+  background: #6c757d !important;
+  color: white !important;
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+}
+
+button:disabled:hover {
+  background: #6c757d !important;
+  transform: none !important;
+  cursor: not-allowed !important;
+}
+
+/* Battle Container Styles */
+.battle-container {
+  position: relative;
+  z-index: 100;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border: 2px solid #34495e;
+  animation: battle-slide-in 0.5s ease-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.battle-container.hidden {
+  display: none !important;
+}
+
+.battle-container.spawn {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  border-color: #c0392b;
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+}
+
+.battle-container.victory {
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  border-color: #27ae60;
+  box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
+}
+
+.battle-container.defeat {
+  background: linear-gradient(135deg, #7f8c8d 0%, #95a5a6 100%);
+  border-color: #7f8c8d;
+  box-shadow: 0 8px 25px rgba(127, 140, 141, 0.4);
+}
+
+.battle-header {
+  text-align: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.battle-header h3 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.battle-header p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.battle-yeti-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.battle-yeti-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.battle-yeti-details {
+  flex: 1;
+}
+
+.battle-yeti-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.battle-yeti-class {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 5px;
+}
+
+.battle-yeti-power {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.battle-countdown {
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.countdown-label {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 5px;
+}
+
+.countdown-timer {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f39c12;
+}
+
+.battle-actions {
+  text-align: center;
+}
+
+.battle-engage-btn {
+  background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+}
+
+.battle-engage-btn:hover {
+  background: linear-gradient(135deg, #e0a800 0%, #d39e00 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 193, 7, 0.4);
+}
+
+.battle-results {
+  text-align: center;
+}
+
+.battle-result-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.battle-result-details {
+  font-size: 14px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.battle-power-comparison {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.battle-power-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.battle-power-row:last-child {
+  margin-bottom: 0;
+}
+
+.battle-power-label {
+  font-weight: bold;
+}
+
+.battle-power-value {
+  font-family: monospace;
+}
+
+.battle-power-value.positive {
+  color: #2ecc71;
+}
+
+.battle-power-value.negative {
+  color: #e74c3c;
+}
+
+.battle-rewards {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.reward-item {
+  font-size: 14px;
+  margin-bottom: 8px;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.reward-item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.results-countdown {
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.results-countdown span {
+  font-weight: bold;
+  color: #f39c12;
+}
+
+@keyframes battle-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   MINI WALLET
+   ======================================== */
+
+.mini-wallet {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #4A90E2;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  text-align: center;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mini-wallet-snowballs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.mini-wallet-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2E7D32;
+  line-height: 1.2;
+}
+
+.mini-wallet-label {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.2;
+}
+
+.mini-wallet-sps,
+.mini-wallet-click-power {
+  font-size: 0.9rem;
+  color: #333;
+  margin: 2px 0;
+}
+
+/* ========================================
+   NOTIFICATION PANELS
+   ======================================== */
+
+/* Central Notification Panel (Lore & Achievements) */
+.notification-panel.central {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    max-width: 800px;
+    height: 108px; /* Reduced from 120px by 10% (120 * 0.9 = 108) */
+    background: rgba(0, 0, 0, 0.85);
+    border: 2px solid #4A90E2;
+    border-radius: 12px;
+    z-index: 10000;
+    display: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.notification-panel.central .notification-content {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+    color: white;
+}
+
+.notification-panel.central .notification-icon {
+    font-size: 2.5rem;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.notification-panel.central .notification-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.notification-panel.central .notification-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.notification-panel.central .notification-description {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+/* Concord Activity Panel (Yetis, Travel, Battles) */
+.activity-panel {
+    position: fixed;
+    bottom: 1%; /* 1% from bottom of screen (similar to central panel being 1% from top) */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    max-width: 800px;
+    height: 162px; /* 50% higher than central panel (108px * 1.5 = 162px) */
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #1976D2;
+    border-radius: 12px; /* All corners rounded like central panel */
+    z-index: 9999;
+    display: none;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.activity-panel .activity-content {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    height: 100%;
+    color: #333;
+}
+
+.activity-panel .activity-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.activity-panel .activity-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.activity-panel .activity-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.activity-panel .activity-description {
+    font-size: 1rem;
+    margin-bottom: 3px;
+    line-height: 1.3;
+}
+
+.activity-panel .activity-details {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* Animation Classes */
+.slide-in {
+    animation: slideInFromTop 0.5s ease-out;
+}
+
+.slide-out {
+    animation: slideOutToTop 0.5s ease-in;
+}
+
+.activity-panel.slide-in {
+    animation: slideInFromBottom 0.5s ease-out;
+}
+
+.activity-panel.slide-out {
+    animation: slideOutToBottom 0.5s ease-in;
+}
+
+/* Animation Keyframes */
+@keyframes slideInFromTop {
+    from {
+        transform: translateX(-50%) translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToTop {
+    from {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-50%) translateY(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateX(-50%) translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToBottom {
+    from {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-50%) translateY(100%);
+        opacity: 0;
+    }
+}
+  

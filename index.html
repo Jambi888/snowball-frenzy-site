@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snowball Frenzy - Game Ready UI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Minimal base styles - GameReadyUIManager will inject the full design system */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Nunito', Arial, sans-serif;
+      background: linear-gradient(180deg, #F8FAFC 0%, #E0F2FE 100%);
+      color: #1E293B;
+      overflow: hidden;
+    }
+    /* Loading indicator */
+    .loading {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #38BDF8;
+    }
+    .loading::after {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid #E2E8F0;
+      border-radius: 50%;
+      border-top-color: #38BDF8;
+      animation: spin 1s ease-in-out infinite;
+      margin-left: 10px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading">Loading Snowball Frenzy...</div>
+  <!-- GameReadyUIManager will create the game-ready-container here -->
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
